@@ -1,17 +1,18 @@
 #!/usr/bin/env python3
 """
-jenkins_fortify_report.py
+jenkins_stage_report.py
 --------------------------
 A utility to pull Jenkins pipeline build data and report on how long a specific
 stage takes across all your jobs — in this case, the Fortify SAST scan stage.
 
 The idea is simple: instead of manually clicking through Jenkins to figure out
-which pipelines ran a Fortify scan and how long it took, this script does it
+which pipelines ran the stage required for you and how long it took, this script does it
 automatically. It hits the Jenkins API, walks every job (including nested
 folders), finds builds that ran in a given date range, extracts the stage
 durations, and writes everything out to a formatted Excel report.
 
-If you want to track a different stage (e.g. "SonarQube", "Deploy", "Test"),
+In this case am fetching the logs fir a stage called fortify scan which does a static 
+code application security testing.f you want to track a different stage (e.g. "SonarQube", "Deploy", "Test"),
 just change STAGE_KEYWORDS in the CONFIG section below. Everything else works
 the same way.
 
