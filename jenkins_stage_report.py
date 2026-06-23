@@ -12,7 +12,7 @@ folders), finds builds that ran in a given date range, extracts the stage
 durations, and writes everything out to a formatted Excel report.
 
 In this case am fetching the logs for a stage called fortify scan which does a static 
-code application security testing.f you want to track a different stage (e.g. "SonarQube", "Deploy", "Test"),
+code application security testing. If you want to track a different stage (e.g. "SonarQube", "Deploy", "Test"),
 just change STAGE_KEYWORDS in the CONFIG section below. Everything else works
 the same way.
 
